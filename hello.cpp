@@ -1,5 +1,6 @@
 #include <iostream>
+using namespace std; //make names from std visible without std:
 int main()
 {
-std::cout << "Hello, World!\n";
+cout << "Hello, World!\n";
 }
