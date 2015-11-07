@@ -5,19 +5,17 @@
 //
 
 #include "std_lib_facilities.h"
-
 //------------------------------------------------------------------------------
 int main()
 {
-          string previous = " ";       // previous word; initialized to “not a word”
-          string current;                             // current word
-          while (cin>>current) {                // read a stream of words
-                    if (previous == current)    // check if the word is the same as last
-                              cout << "repeated word: " << current << '\n';
-          previous = current;
-          }
+int number_of_words = 0;
+         string previous = " ";                 // not a word
+         string current;
+         while (cin>>current) {
+                   ++number_of_words;       // increase word count
+                   if (previous == current)
+                             cout << "word number " << number_of_words
+                                       << " repeated: " << current << '\n';
+                   previous = current;
+         }
 }
-
-
-//------------------------------------------------------------------------------
-
