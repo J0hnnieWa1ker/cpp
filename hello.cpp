@@ -9,13 +9,17 @@
 //------------------------------------------------------------------------------
 int main()
 {
-          cout << "Please enter your first name and age\n";
-          string first_name;          // string variable
-          int age;                          // integer variable
-          cin >> first_name;         // read a string
-          cin >> age;                    // read an integer
-          cout << "Hello, " << first_name << " (age " << age << ")\n";
+          cout << "Please enter a floating-point value: ";
+          double n;
+          cin >> n;
+          cout << "n == " << n
+                    << "\nn+1 == " << n+1
+                    << "\nthree times n == " << 3*n
+                    << "\ntwice n == " << n+n
+                    << "\nn squared == " << n*n
+                    << "\nhalf of n == " << n/2
+                    << "\nsquare root of n == " << sqrt(n)
+                    << '\n';  // another name for newline (“end of line”) in output
 }
-
 //------------------------------------------------------------------------------
 

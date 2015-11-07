@@ -7,7 +7,12 @@
 #ifndef STD_LIB_FACILITIES_GUARD
 #define STD_LIB_FACILITIES_GUARD 1
 
+#include <algorithm>
+#include <cmath>
 #include <iostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -22,4 +27,14 @@ inline void keep_window_open()
 
 //------------------------------------------------------------------------------
 
+// Helper function to show an error message
+inline void error(const string& errormessage)
+{
+    cerr << errormessage << endl;
+    throw runtime_error(errormessage);
+}
+
+//------------------------------------------------------------------------------
+
 #endif // STD_LIB_FACILITIES_GUARD
+
