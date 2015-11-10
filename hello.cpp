@@ -1,18 +1,35 @@
 
 //
-// This is example code from 4.4.2.3 for-statements
+// This is example code from Chapter 4.6.1 "Growing a vector" of
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
 //
 
 #include "std_lib_facilities.h"
+
 //------------------------------------------------------------------------------
-int square(int x)    // return the square of x
-{
-          return x*x;
-}
+
 int main()
 {
-          for (int i = 0; i<100; ++i)
-                    cout << i << '\t' << square(i) << '\n';
+    vector<double> v;    // start off empty; that is, v has no elements
+
+    v.push_back(2.7);    // add an element with the value 2.7 at end ("the back") of v
+                         // v now has one element and v[0]==2.7
+
+    v.push_back(5.6);    // add an element with the value 5.6 at end of v
+                         // v now has two elements and v[1]==5.6
+
+    v.push_back(7.9);    // add an element with the value 7.9 at end of v
+                         // v now has three elements and v[2]==7.9
+    v.push_back(1.2);
+    v.push_back(2.4); 
+    v.push_back(4.3); 
+    v.push_back(2.5); 
+    v.push_back(3.6); 
+    v.push_back(8.9); 
+    v.push_back(5.1);  
+    for(int i=0; i<v.size(); ++i)
+        cout << "v[" << i << "]==" <<v[i] << '\n'; 
 }
+
+//------------------------------------------------------------------------------
 
