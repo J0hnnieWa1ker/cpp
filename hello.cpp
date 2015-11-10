@@ -1,6 +1,6 @@
 
 //
-// This is example code from Chapter 3.1 "Input" of
+// This is example code from 4.4.1.1 if-statements
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
 //
 
@@ -8,17 +8,16 @@
 //------------------------------------------------------------------------------
 int main()
 {
-        double d = 0;
-          while (cin>>d) {            // repeat the statements below
-                                                  // as long as we type in numbers
-                    int i = d;               // try to squeeze a double into an int
-                    char c = i;            // try to squeeze an int into a char
-                    int i2 = c;             // get the integer value of the character
-                    cout << "d==" << d                          // the original double
-                              << " i=="<< i                            // converted to int
-                              << " i2==" << i2                       // int value of char
-                              << " char(" << c << ")\n";      // the char
-          }
+int a = 0;
+          int b = 0;
+          cout << "Please enter two integers\n";
+          cin >> a >> b;
 
+          if (a<b)       // condition
+                             // 1st alternative (taken if condition is true):
+                    cout << "max(" << a << "," << b <<") is " << b <<"\n";
+          else
+                             // 2nd alternative (taken if condition is false):
+                    cout << "max(" << a << "," << b <<") is " << a << "\n";
 }
 
