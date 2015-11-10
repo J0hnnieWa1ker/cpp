@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 int main()
 {
- constexpr double cm_per_inch = 2.54;     // number of centimeters in
+ const double cm_per_inch = 2.54;     // number of centimeters in
                                                                               // an inch
           double length = 1;                                     // length in inches or
                                                                               // centimeters
