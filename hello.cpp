@@ -1,6 +1,6 @@
 
 //
-// This is example code from 4.4.1.1 if-statements
+// This is example code from 4.4.1.2 switch-statements
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
 //
 
@@ -8,16 +8,23 @@
 //------------------------------------------------------------------------------
 int main()
 {
-int a = 0;
-          int b = 0;
-          cout << "Please enter two integers\n";
-          cin >> a >> b;
-
-          if (a<b)       // condition
-                             // 1st alternative (taken if condition is true):
-                    cout << "max(" << a << "," << b <<") is " << b <<"\n";
-          else
-                             // 2nd alternative (taken if condition is false):
-                    cout << "max(" << a << "," << b <<") is " << a << "\n";
+ constexpr double cm_per_inch = 2.54;     // number of centimeters in
+                                                                              // an inch
+          double length = 1;                                     // length in inches or
+                                                                              // centimeters
+          char unit = 'a';
+          cout<< "Please enter a length followed by a unit (c or i):\n";
+          cin >> length >> unit;
+          switch (unit) {
+          case 'i':
+                    cout << length << "in == " << cm_per_inch*length << "cm\n";
+                    break;
+          case 'c':
+                    cout << length << "cm == " << length/cm_per_inch << "in\n";
+                    break;
+          default:
+                    cout << "Sorry, I don't know a unit called '" << unit << "'\n";
+                    break;
+          }
 }
 
