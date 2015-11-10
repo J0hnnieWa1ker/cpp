@@ -1,6 +1,6 @@
 
 //
-// This is example code from 4.4.2.1 while-statements
+// This is example code from 4.4.2.3 for-statements
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
 //
 
@@ -12,11 +12,7 @@ int square(int x)    // return the square of x
 }
 int main()
 {
-         int i = 0;           // start from 0
-         while(i<200) {
-                   cout << i << '\t' << square(i) << '\n';
-                   ++i;        // increment i (that is, i becomes i+1)
-         }
+          for (int i = 0; i<100; ++i)
+                    cout << i << '\t' << square(i) << '\n';
 }
-
 
