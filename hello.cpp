@@ -8,14 +8,17 @@
 //------------------------------------------------------------------------------
 int main()
 {
-int number_of_words = 0;
-         string previous = " ";                 // not a word
-         string current;
-         while (cin>>current) {
-                   ++number_of_words;       // increase word count
-                   if (previous == current)
-                             cout << "word number " << number_of_words
-                                       << " repeated: " << current << '\n';
-                   previous = current;
-         }
+        double d = 0;
+          while (cin>>d) {            // repeat the statements below
+                                                  // as long as we type in numbers
+                    int i = d;               // try to squeeze a double into an int
+                    char c = i;            // try to squeeze an int into a char
+                    int i2 = c;             // get the integer value of the character
+                    cout << "d==" << d                          // the original double
+                              << " i=="<< i                            // converted to int
+                              << " i2==" << i2                       // int value of char
+                              << " char(" << c << ")\n";      // the char
+          }
+
 }
+
