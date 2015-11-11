@@ -1,0 +1,34 @@
+air:cpp jon$ vi chapter.5.3.1.cpp
+air:cpp jon$ make chapter.5.3.1
+c++ -std=c++11    chapter.5.3.1.cpp   -o chapter.5.3.1
+chapter.5.3.1.cpp:15:20: error: expected ')'
+    int s1 = area(7;        // error: ) missing
+                   ^
+chapter.5.3.1.cpp:15:18: note: to match this '('
+    int s1 = area(7;        // error: ) missing
+                 ^
+chapter.5.3.1.cpp:16:9: error: redefinition of 's1'
+    int s1 = area(7)        // error: ; missing
+        ^
+chapter.5.3.1.cpp:15:9: note: previous definition is here
+    int s1 = area(7;        // error: ) missing
+        ^
+chapter.5.3.1.cpp:16:14: error: no matching function for call to 'area'
+    int s1 = area(7)        // error: ; missing
+             ^~~~
+chapter.5.3.1.cpp:9:5: note: candidate function not viable: requires 2 arguments, but 1 was provided
+int area(int length, int width);    // calculate area of a rectangle
+    ^
+chapter.5.3.1.cpp:18:19: warning: multi-character character constant [-Wmultichar]
+    int s4 = area('7);        // error: non-terminated character (' missing)
+                  ^
+chapter.5.3.1.cpp:18:19: warning: character constant too long for its type
+chapter.5.3.1.cpp:18:69: error: expected ')'
+    int s4 = area('7);        // error: non-terminated character (' missing)
+                                                                    ^
+chapter.5.3.1.cpp:18:18: note: to match this '('
+    int s4 = area('7);        // error: non-terminated character (' missing)
+                 ^
+2 warnings and 4 errors generated.
+make: *** [chapter.5.3.1] Error 1
+air:cpp jon$ 
