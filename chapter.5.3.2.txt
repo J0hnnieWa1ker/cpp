@@ -1,0 +1,25 @@
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.18 KiB | 0 bytes/s, done.
+Total 7 (delta 5), reused 0 (delta 0)
+To https://github.com/J0hnnieWa1ker/cpp.git
+   03649c5..af25064  master -> master
+air:cpp jon$ vi chapter.5.3.2.cpp
+air:cpp jon$ make chapter.5.3.2
+c++ -std=c++11    chapter.5.3.2.cpp   -o chapter.5.3.2
+chapter.5.3.2.cpp:18:14: error: use of undeclared identifier 'arena'; did you mean 'area'?
+    int x0 = arena(7,10);
+             ^~~~~
+             area
+chapter.5.3.2.cpp:9:5: note: 'area' declared here
+int area(int length, int width)
+    ^
+chapter.5.3.2.cpp:20:14: error: no matching function for call to 'area'
+    int x2 = area("seven",2);
+             ^~~~
+chapter.5.3.2.cpp:9:5: note: candidate function not viable: no known conversion from 'const char [6]' to 'int' for 1st argument
+int area(int length, int width)
+    ^
+2 errors generated.
+make: *** [chapter.5.3.2] Error 1
