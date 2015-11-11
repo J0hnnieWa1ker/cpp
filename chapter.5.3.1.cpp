@@ -5,25 +5,20 @@
 //
 
 //------------------------------------------------------------------------------
-
-int area(int length, int width);    // calculate area of a rectangle
-
-//------------------------------------------------------------------------------
-
-int main()
-{
-    int s1 = area(7;        // error: ) missing
-    int s1 = area(7)        // error: ; missing
-    Int s3 = area(7);        // error: Int is not a type
-    int s4 = area('7);        // error: non-terminated character (' missing)
-    return area(4,4);
-}
-
-//------------------------------------------------------------------------------
-
+#include "std_lib_facilities.h"
 int area(int length, int width)
 {
     return length*width;
 }
-
 //------------------------------------------------------------------------------
+
+int main()
+{
+    int s1 = area(7,2);        // fixed error: ) missing
+    //int s1 = area(7);        // fixed error: ; missing
+    //int s3 = area(7);        // fixed error: Int is not a type
+    //int s4 = area(7);        // fixed error: non-terminated character (' missing)
+    cout << "s1 is: " << s1 << endl;
+    return area(4,4);
+}
+
